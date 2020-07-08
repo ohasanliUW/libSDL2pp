@@ -88,9 +88,9 @@ INCLUDE_DIRECTORIES(SYSTEM ${SDL2_ALL_INCLUDE_DIRS})
 
 INCLUDE(CheckCompile)
 CHECK_COMPILE(
-	SDL2PP_WITH_EXPERIMENTAL_OPTIONAL
-	"#include <experimental/optional>\nint main() { std::experimental::optional<int> o; return !o; }"
-	"experimental/optional header"
+	SDL2PP_WITH_OPTIONAL
+	"#include <optional>\nint main() { std::optional<int> o; return !o; }"
+	"optional header"
 )
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${SDL2PP_WARNINGS}")
